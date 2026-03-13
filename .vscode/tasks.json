@@ -1,0 +1,33 @@
+{
+    "tasks": [
+        {
+            "type": "cppbuild",
+            "label": "C/C++: cl.exe сборка активного файла",
+            "command": "cl.exe",
+            "args": [
+                "/O2",                // Оптимизация скорости (лучше для релизной версии)
+                "/MT",
+                "/Zi",
+                "/EHsc",
+                "/nologo",
+                "/DNDEBUG",           // Отключает макросы assert и отладочный код
+                "/Fe${fileDirname}\\project_localization.exe",
+                "${file}",
+                "advapi32.lib",
+                "resources.res",
+            ],
+            "options": {
+                "cwd": "${fileDirname}"
+            },
+            "problemMatcher": [
+                "$msCompile"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "detail": "Задача создана отладчиком."
+        }
+    ],
+    "version": "2.0.0"
+}
