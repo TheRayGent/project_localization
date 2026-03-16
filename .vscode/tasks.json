@@ -11,7 +11,7 @@
                 "/EHsc",
                 "/nologo",
                 "/DNDEBUG",           // Отключает макросы assert и отладочный код
-                "/Fe${fileDirname}\\project_localization.exe",
+                "/Fe${fileDirname}\\build_${fileBasenameNoExtension}\\${fileBasenameNoExtension}.exe",
                 "${file}",
                 "advapi32.lib",
                 "resources.res",

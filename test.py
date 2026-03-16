@@ -40,6 +40,6 @@ def get_heroes():
 
 
 if __name__ == '__main__':
-    get_attributes()
-    get_mods()
-    get_heroes()
+    with open('main.cpp') as f:
+        file = f.readlines()
+    print(file)
